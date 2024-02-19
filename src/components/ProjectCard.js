@@ -9,8 +9,10 @@ export const ProjectCard = ({ title, description, imgUrl, githubLink }) => {
           <h4>{title}</h4>
           <span>{description}</span>
           <div className="github-button">
-            <a href={githubLink} target="_blank" rel="noopener noreferrer">
-              <button type="button" class="btn btn-outline-primary">View on GitHub</button>
+            <a href={githubLink} target="_blank" rel="noopener noreferrer" className="neon-button">
+              <span></span><span></span>
+              <span></span><span></span>
+              GitHub
             </a>
           </div>
         </div>
