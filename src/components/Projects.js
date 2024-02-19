@@ -83,48 +83,57 @@ export const Projects = () => {
 
                     
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                      <Tab.Pane eventKey="first">
-                        <Row>
-                          {
-                            projects.map((project, index) => {
-                              return (
-                                <ProjectCard
-                                  key={index}
-                                  {...project}
-                                />
-                              )
-                            })
-                          }
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="second">
-                        <Row>
-                          {
-                            projects.map((project, index) => {
-                              return (
-                                <ProjectCard
-                                  key={index}
-                                  {...project}
-                                />
-                              )
-                            })
-                          }
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <Row>
-                          {
-                            projects.map((project, index) => {
-                              return (
-                                <ProjectCard
-                                  key={index}
-                                  {...project}
-                                />
-                              )
-                            })
-                          }
-                        </Row>
-                      </Tab.Pane>
+                    <Tab.Pane eventKey="first">
+  <Row>
+    {
+      projects.map((project, index) => {
+        return (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            imgUrl={project.imgUrl}
+            githubLink={project.link} // Use `link` prop from the project object
+          />
+        )
+      })
+    }
+  </Row>
+</Tab.Pane>
+                  <Tab.Pane eventKey="second">
+  <Row>
+    {
+      projects.map((project, index) => {
+        return (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            imgUrl={project.imgUrl}
+            githubLink={project.link} // Use `link` prop from the project object
+          />
+        )
+      })
+    }
+  </Row>
+</Tab.Pane>
+                    <Tab.Pane eventKey="third">
+  <Row>
+    {
+      projects.map((project, index) => {
+        return (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            imgUrl={project.imgUrl}
+            githubLink={project.link} // Use `link` prop from the project object
+          />
+        )
+      })
+    }
+  </Row>
+</Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
                 </div>}
