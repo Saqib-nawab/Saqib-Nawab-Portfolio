@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Full Stack", "Web Developer"];
+  const toRotate = ["Full Stack", "Web Developer"];
   const period = 200;
 
   useEffect(() => {
@@ -54,19 +54,26 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Saqib,`} <span className="txt-rotate" dataPeriod="500" data-rotate='[ "Full Stack", "Web developer"]'><span className="wrap">{text}</span></span></h1>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline ">Welcome to my Portfolio</span>
+                  <div className="github-button">
+                    <a href="https://drive.google.com/file/d/1Uxl-hwk-9InYUfSJrRI7mtj0Xa3yt7Zu/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="neon-button">
+                      <span></span><span></span>
+                      <span></span><span></span>
+                      Download Resume
+                    </a>
+                  </div>
+                  <h1>{`Hi! I'm Saqib,`} <span className="txt-rotate" dataPeriod="500" data-rotate='[ "Full Stack", "Web developer"]'><span className="wrap">{text}</span></span></h1>
                   <p>Front-end magician, back-end architect, full-stack problem-solver. I craft captivating web experiences with the MERN stack, turning ideas into reality. Let's code your vision together!</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-              </div>}
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img" />
                 </div>}
             </TrackVisibility>
           </Col>
